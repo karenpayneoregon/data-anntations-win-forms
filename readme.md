@@ -1,5 +1,7 @@
 # Windows Form Data Annotation
 
+See :open_book:  [article](https://dev.to/karenpayneoregon/window-forms-data-annotation-276m)
+
 Validation is the first and most important step in securing an application. It prevents the application from processing unwanted inputs that may produce unpredictable results. Couple validation with properly transmitting data to a data source.
 
 When validating data should there be instant feedback? This is subjective, instant feedback will be better when there are many inputs so this would be better than waiting to submit their input. In the case of instant feedback there needs to be events triggered to perform validation while on submit there is a central generic method to perform validation.
