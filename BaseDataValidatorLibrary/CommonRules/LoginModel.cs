@@ -5,7 +5,7 @@ namespace BaseDataValidatorLibrary.CommonRules;
 /// <summary>
 /// Here we want to validate passwords match
 /// </summary>
-public class LoginCompare
+public class LoginModel
 {
 
     [Required(ErrorMessage = "{0} is required"), DataType(DataType.Text)]
@@ -15,9 +15,8 @@ public class LoginCompare
     [Required(ErrorMessage = "{0} is required"), DataType(DataType.Text)]
     [StringLength(12, MinimumLength = 6)]
     public string Password { get; set; }
-    [Compare("Password", ErrorMessage = "Passwords do not match, please try again")]
+    [Compare(nameof(Password), ErrorMessage = "Passwords do not match, please try again")]
     [StringLength(12, MinimumLength = 6)]
     public string PasswordConfirmation { get; set; }
-
 }
 

@@ -11,13 +11,16 @@ public partial class LoginForm : Form
 
     private void ValidateButton_Click(object sender, EventArgs e)
     {
-        LoginCompare loginCompare = new LoginCompare()
+
+        LoginModel loginCompare = new()
         {
             Name = NameTextBox.Text,
             Password = PasswordTextBox.Text,
             PasswordConfirmation = PasswordConfirmTextBox.Text,
         };
         var (success, container) = IsValidEntity(loginCompare);
+
+
         MessageBox.Show(success ? "Ok" : "Invalid");
     }
 }
