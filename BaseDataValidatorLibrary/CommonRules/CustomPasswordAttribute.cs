@@ -12,7 +12,7 @@ public partial class CustomPasswordAttribute : ValidationAttribute
 
         var password = value.ToString();
 
-        if (password.Length < 10) return false;
+        if (password!.Length < 10) return false;
 
         // Check for uppercase, lowercase, numbers and special characters
         return UpperCaseRegex().IsMatch(password) && LowerCaseRegex().IsMatch(password) &&
