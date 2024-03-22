@@ -70,7 +70,7 @@ public class Customer : INotifyPropertyChanged
     [Display(Prompt = "Security pin")]
     public string Pin { get; set; }
 
-    [SocialSecurityAttribute]
+    [SocialSecurity]
     [Display(Prompt = "SSN")]
     public string SocialSecurity { get; set; }
 
@@ -98,4 +98,11 @@ public class Customer : INotifyPropertyChanged
         PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
     }
 
+}
+
+public class User
+{
+    public string UserName { get; set; }
+    [CustomPassword]
+    public string Password { get; set; }
 }
