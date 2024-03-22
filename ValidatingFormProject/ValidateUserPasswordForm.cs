@@ -6,6 +6,7 @@ using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using ValidatingFormProject.Models;
@@ -17,7 +18,9 @@ public partial class ValidateUserPasswordForm : Form
     public ValidateUserPasswordForm()
     {
         InitializeComponent();
+
     }
+
 
     private void ValidatePasswordButton_Click(object sender, EventArgs e)
     {

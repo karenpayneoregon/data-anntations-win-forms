@@ -6,10 +6,14 @@ using System.Text.RegularExpressions;
 namespace BaseDataValidatorLibrary.CommonRules;
 public partial class CustomPasswordAttribute : ValidationAttribute
 {
+    public CustomPasswordAttribute()
+    {
+        ErrorMessage = "Must contain at least 10 characters, one uppercase, one lowercase, one number and one special character";
+    }
     public override bool IsValid(object value)
     {
         if (value == null) return false;
-
+        
         var password = value.ToString();
 
         if (password!.Length < 10) return false;
